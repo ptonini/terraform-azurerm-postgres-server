@@ -3,32 +3,32 @@ variable "name" {}
 variable "rg" {}
 
 variable "storage" {
-  type = number
+  type    = number
   default = 5120
 }
 
 variable "backup_retention_days" {
-  type = number
+  type    = number
   default = 30
 }
 
 variable "auto_grow" {
-  type = bool
+  type    = bool
   default = true
 }
 
 variable "admin_username" {
-  type = string
+  type    = string
   default = "postgres"
 }
 
 variable "psql_version" {
-  type = number
+  type    = number
   default = 11
 }
 
 variable "public_access" {
-  type = bool
+  type    = bool
   default = false
 }
 
@@ -50,7 +50,7 @@ variable "allowed_sources" {
   default = {}
   type = map(object({
     start_address = string
-    end_address = string
+    end_address   = string
   }))
 }
 
