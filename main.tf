@@ -22,7 +22,10 @@ resource "azurerm_postgresql_server" "this" {
   lifecycle {
     ignore_changes = [
       storage_mb,
-      tags
+      tags["business_unit"],
+      tags["environment"],
+      tags["product"],
+      tags["subscription_type"]
     ]
   }
 }
@@ -49,7 +52,10 @@ resource "azurerm_private_endpoint" "this" {
   }
   lifecycle {
     ignore_changes = [
-      tags
+      tags["business_unit"],
+      tags["environment"],
+      tags["product"],
+      tags["subscription_type"]
     ]
   }
 }
